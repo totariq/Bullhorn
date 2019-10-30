@@ -11,7 +11,8 @@
     <tr>
         <th>Content</th>
         <th>Posted Date</th>
-        <td>Sent By</td>
+        <th>Sent By</th>
+        <--! <td>Sent By</td> -->
     </tr>
     <tr th:each="message : ${messages}">
         <td th:text="${message.content}"></td>
