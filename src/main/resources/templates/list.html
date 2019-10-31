@@ -30,12 +30,14 @@
         <th>Content</th>
         <th>Posted Date</th>
         <th>Sent By</th>
-        <--! <td>Sent By</td> -->
+        <th>Sender Pic</th>
+
     </tr>
     <tr th:each="message : ${messages}">
         <td th:text="${message.content}"></td>
         <td th:text="${message.posteddate}"></td>
         <td th:text="${message.sentby}"></td>
+        <td th:if="${message.headshot} != null"><img th:src="${message.headshot}"/></td>
         <td>
             <a th:href="@{/update/{id}(id=${message.id})}">Update</a>
             <a th:href="@{/detail/{id}(id=${message.id})}">Details</a>

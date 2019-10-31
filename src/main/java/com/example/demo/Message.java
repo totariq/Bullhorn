@@ -26,6 +26,8 @@ public class Message {
     @Size(min=4)
     private String sentby;
 
+    private String headshot;
+
     public Message() {
     }
 
@@ -65,5 +67,13 @@ public class Message {
 
     public void setSentby(String sentby) {
         this.sentby = sentby;
+    }
+
+    public String getHeadshot() {
+        return headshot;
+    }
+
+    public void setHeadshot(String headshot) {
+        this.headshot = headshot;
     }
 }
